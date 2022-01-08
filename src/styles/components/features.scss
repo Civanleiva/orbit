@@ -1,0 +1,30 @@
+.features {
+  margin: 5rem 2rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  align-content: center;
+
+  @media only screen and (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+
+  .features-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+
+    .feature-title {
+      font-size: 1.6rem;
+      color: #fff;
+      border-left: 0.2rem solid #4c2122;
+      padding-left: 2rem;
+    }
+
+    .feature-description {
+      font-size: 1.4rem;
+      color: #6F6F6F;
+      padding-left: 2rem;
+    }
+  }
+}

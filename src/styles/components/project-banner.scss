@@ -1,0 +1,115 @@
+
+
+.project-banner {
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  @media only screen and (max-width: 425px) {
+    flex-direction: column;
+  }
+
+  .btn-start {
+
+    background-color: #4c2122;
+    display: inline-block;
+    padding: 1.5rem;
+    transition: background-color 0.5s;
+    cursor: pointer;
+    border: 0.2rem solid #4c2122;
+
+    &:hover {
+      background-color: #fff;
+      border: 0.2rem solid #4c2122;
+      color: #000;
+    }
+  }
+}
+
+.form {
+  color: #fff;
+
+  form {
+    margin: 5rem 5rem 0 5rem;
+    display: flex;
+    flex-direction: column;
+
+    .input-container {
+      position: relative;
+      margin: 0 60px 50px;
+
+      input {
+        outline: none;
+        z-index: 1;
+        position: relative;
+        background: none;
+        width: 100%;
+        height: 60px;
+        border: 0;
+        color: #212121;
+        font-size: 24px;
+        font-weight: 400;
+
+        &:focus {
+          ~ label {
+            color: #9d9d9d;
+            transform: translate(-12%, -50%) scale(0.75);
+          }
+
+          ~ .bar {
+            &:before,
+            &:after {
+              width: 50%;
+            }
+          }
+        }
+
+        &:valid {
+          ~ label {
+            color: #9d9d9d;
+            transform: translate(-12%, -50%) scale(0.75);
+          }
+        }
+      }
+
+      label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #757575;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 60px;
+        transition: 0.2s ease;
+      }
+
+      .bar {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: #757575;
+        width: 100%;
+        height: 1px;
+
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          background: #4c2122;
+          width: 0;
+          height: 2px;
+          transition: .2s ease;
+        }
+
+        &:before {
+          left: 50%;
+        }
+
+        &:after {
+          right: 50%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.team {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+
+  .team-images {
+    max-width: 33vw;
+
+    @media only screen and (max-width: 768px) {
+      max-width: 100vw;
+    }
+  }
+
+  .team-details {
+    padding: 4rem;
+
+    .team-title {
+      font-size: 2.7rem;
+      border-bottom: 0.7rem solid #4c2122;
+    }
+
+    .team-description {
+      font-size: 1.4rem;
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .team-meet-button {
+      background-color: #4c2122;
+      display: inline-block;
+      padding: 1.5rem;
+      transition: background-color 0.5s;
+      cursor: pointer;
+      border: 0.2rem solid #4c2122;
+
+      &:hover {
+        background-color: #fff;
+        border: 0.2rem solid #4c2122;
+        color: #000;
+      }
+    }
+  }
+}

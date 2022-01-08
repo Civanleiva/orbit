@@ -1,0 +1,46 @@
+.steps {
+  color: #FFF;
+  display: flex;
+  justify-content: space-around;
+  margin: 5rem 20rem 5rem 20rem;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    margin: 0;
+
+    .step {
+      padding: 0 4rem 0 4rem;
+    }
+  }
+
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+
+    .step-number {
+      font-size: 3rem;
+      border: 1px solid #4c2122;
+      border-radius: 50%;
+      width: 8rem;
+      height: 6rem;
+      text-align: center;
+      padding-top: 2rem;
+      transition: background-color 0.5s;
+
+      &:hover {
+        background-color: #4c2122;
+      }
+    }
+
+    .step-title {
+      font-size: 1.6rem;
+    }
+
+    .step-description {
+      font-size: 1.4rem;
+      text-align: center;
+    }
+  }
+}

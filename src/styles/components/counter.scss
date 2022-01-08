@@ -1,0 +1,30 @@
+.counter {
+  margin: 4rem 10rem 4rem 20rem;
+  color: #FFF;
+  display: flex;
+  justify-content: space-around;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    margin-left: 10rem;
+  }
+
+  .counter-item {
+    width: 50%;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, #4c2122 25%, #000 25%) 100% 1;
+
+    @media only screen and (max-width: 768px) {
+      padding-top: 2rem;
+    }
+
+    .counter-number {
+      font-size: 2.4rem;
+    }
+
+    .counter-description {
+      font-size: 1.2rem;
+      color: #939393;
+    }
+  }
+}
